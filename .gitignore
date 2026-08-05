@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Environment variables (NEVER commit .env!)
+.env
+.env.local
+.env.*.local
+
+# Logs (can be regenerated)
+*.log
+backup.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+
+# Git internal (don't commit the queue)
+.git/pending_commits.json
+
+# Test files (optional - don't commit test files)
+test_*.py
+*_test.py
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebooks (if any)
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pyre type checker
+.pyre/
+
+# ============================================================
+# IMPORTANT: DO NOT ignore these - they are the main purpose!
+# ============================================================
+# state.json     ← KEEP IN REPO - tracks backup state
+# backup/        ← KEEP IN REPO - the actual backups!

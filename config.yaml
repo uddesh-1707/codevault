@@ -1,0 +1,53 @@
+platforms:
+  leetcode:
+    enabled: true
+    username: "Uddesh_1707" # add your username of leetcode
+
+backup:
+  root_dir: "backup"
+  file_extension_map:
+    cpp: ".cpp"
+    python: ".py"
+    python3: ".py"
+    java: ".java"
+    javascript: ".js"
+    typescript: ".ts"
+    c: ".c"
+    csharp: ".cs"
+    golang: ".go"
+    rust: ".rs"
+    kotlin: ".kt"
+    swift: ".swift"
+    ruby: ".rb"
+    scala: ".scala"
+    php: ".php"
+    # Default fallback
+    default: ".txt"
+
+logging:
+  level: "INFO"
+  file: "backup.log"
+
+git:
+  commit_message: "Auto backup: {date}"
+  max_retries: 3
+  retry_delay_seconds: 5
+
+# Email Notification Configuration
+notifications:
+  enabled: true
+  
+  email:
+    enabled: true
+    sender: "${EMAIL_SENDER}"
+    password: "${EMAIL_PASSWORD}"
+    recipient: "${EMAIL_RECIPIENT}"
+    smtp_server: "${SMTP_SERVER}"
+    smtp_port: "${SMTP_PORT}"
+  
+  # What to send notifications for
+  send_on:
+    - credential_failure   # Critical - credentials expired
+    - backup_failure       # Critical - backup failed
+    - github_downtime      # Warning - GitHub down
+  # send_on_success: true   # Uncomment to also get success emails

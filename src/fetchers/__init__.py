@@ -1,0 +1,1 @@
+"""Fetchers for different competitive programming platforms"""
